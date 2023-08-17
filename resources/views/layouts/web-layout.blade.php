@@ -32,7 +32,7 @@
 
     <!-- A propos section -->
 
-    @yield('content')
+    {{$slot}}
 
 
     <footer>
@@ -50,6 +50,7 @@
         }
     </script>
 
+    @livewireScriptConfig
 
 </body>
 
