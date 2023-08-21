@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Professeur;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('web.home');
+
+    $professeurs = Professeur::take(10)->get();
+    return view('web.home', ['professeurs' => $professeurs]);
 });
 
 Route::get('/apropos', function () {

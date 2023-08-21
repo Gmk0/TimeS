@@ -46,14 +46,15 @@ class ProfesseurResource extends Resource
     {
         return $table
             ->columns([
+
                 Tables\Columns\TextColumn::make('nom')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('prenom')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('fonction')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('prenom'),
+                // ->searchable(),
+                Tables\Columns\TextColumn::make('titre'),
+                // ->searchable(),
+                Tables\Columns\TextColumn::make('fonction'),
+                //->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

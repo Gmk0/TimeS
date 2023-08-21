@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIME SCHEDULE</title>
 
+    <link rel="stylesheet" href="style.css">
 
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    <link rel="stylesheet" href="/build/assets/app.css">
+
+    <script src="/build/assets/app.js"></script>
+
 </head>
 
 <body>
@@ -18,9 +22,9 @@
             <a href="index.html"> <span>TIME</span>SCHEDULE UCC</a>
         </div>
         <ul class="menu">
-            <li><a href="#">Acceuil</a></li>
+            <li><a href="{{url('/')}}">Acceuil</a></li>
             <li><a href="#a-propos">à propos</a></li>
-            <li><a href="#popular-professeurs">Professeurs</a></li>
+            <li><a href="{{url('/professeur')}}">Professeurs</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
         <a href="#" class="btn-reservation">BIENVENUE</a>
@@ -32,7 +36,11 @@
 
     <!-- A propos section -->
 
-    {{$slot}}
+    <main class="pt-16">
+        {{$slot}}
+
+    </main>
+
 
 
     <footer>
