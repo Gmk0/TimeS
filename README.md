@@ -18,9 +18,11 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 
     Accédez au répertoire du projet et exécutez la commande Composer pour installer les dépendances PHP nécessaires :
 
+    ```cd
     cd projet-laravel
 
     composer install ou composer update
+    ```
 
 2. **Configurer le fichier d'environnement** :
 
@@ -39,18 +41,24 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 
     Exécutez la commande suivante pour générer une clé d'application Laravel :
 
+    ```key
     php artisan key:generate
+    ```
 
 4. **Migrer la base de données** :
 
     Créez les tables de la base de données en exécutant les migrations :
 
+    ``` migrate
     php artisan migrate
+    ```
 
 5. **Lancer le serveur de développement** :
 
     Vous pouvez maintenant lancer le serveur de développement Laravel :
 
+    ``` serve
     php artisan serve
+    ```
 
     Votre application Laravel est désormais accessible à l'adresse <http://localhost:8000>.
