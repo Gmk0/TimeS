@@ -11,7 +11,17 @@
 
     <link rel="stylesheet" href="/build/assets/app.css">
 
-    <script src="/build/assets/app.js"></script>
+    <script src="/build/assets/app.js" defer></script>
+
+
+    <script>
+        var toggle_menu = document.querySelector('.responsive-menu');
+            var menu = document.querySelector('.menu');
+            toggle_menu.onclick= function(){
+                 toggle_menu.classList.toggle('active');
+                 menu.classList.toggle('responsive')
+            }
+    </script>
 
 </head>
 
@@ -36,7 +46,7 @@
 
     <!-- A propos section -->
 
-    <main class="pt-16">
+    <main class="">
         {{$slot}}
 
     </main>
@@ -49,14 +59,7 @@
     </footer>
 
 
-    <script>
-        var toggle_menu = document.querySelector('.responsive-menu');
-        var menu = document.querySelector('.menu');
-        toggle_menu.onclick= function(){
-             toggle_menu.classList.toggle('active');
-             menu.classList.toggle('responsive')
-        }
-    </script>
+
 
     @livewireScriptConfig
 
